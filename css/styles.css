@@ -33,5 +33,37 @@ iframe, img {
 	#home {
 		width: 300px;
 	}
+	#youtube-big {
+		display: none;
+
+	}
+
+	#youtube-med {
+		display: block;
+
+	}
 
 }
+
+/* tablet */
+
+@media (min-width: 768px) {
+	#youtube-big {
+		display: block;
+
+	}
+
+	#youtube-med {
+		display: none;
+
+	}
+
+}
+
+/* mobile */
+
+@media (min-width: 780px) {
+	article section {}
+
+}
+
