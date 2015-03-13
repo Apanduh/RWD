@@ -8,8 +8,9 @@ body {
 /*  layout  */
 
 .container {
+	
 	width: 90%;
-	background: gray;
+	background: white;
 	margin: 0 auto;
 
 }
@@ -23,38 +24,70 @@ article section {
 /*  adaptive content */
 
 iframe, img {
-
 	max-width: 100%;
-	width: 100%;
+	width:100%;
 
 }
+/*dimensions for logo*/
 
-@media (min-width: 960px) {
-	#home {
-		width: 300px;
+#home {
+	max-width: 300px;
+	width: 300px;
+} 
+/*show for desktop*/
+@media (min-width: 1025px) {
+	
+	.deskktop-video {
+		height: 320px;
+		max-width: 640px;
+		width: 640px;
 	}
-	#youtube-big {
+/*hide for mobile*/
+	.mobile-video {
 		display: none;
 
 	}
+/* center video*/
+	main {
+		text-align: center;
+	}
 
-	#youtube-med {
-		display: block;
+}
 
+/*desktop standard*/
+@media (max-width: 1024px ) {
+	/* hide for desktop*/
+	.desktop-video {
+		height: 320px;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.mobile-video {
+		display: none;
 	}
 
 }
 
 /* tablet */
 
-@media (min-width: 768px) {
-	#youtube-big {
+@media (max-width: 768px) {
+	.desktop-video {
+		display: none;
+
+	}
+
+	.mobile-video {
+		width: 100%;
 		display: block;
 
 	}
 
-	#youtube-med {
-		display: none;
+	/*single colum*/
+	article section {
+		float: none;
+		width: 100%;
+		width: 100%;
 
 	}
 
@@ -62,8 +95,34 @@ iframe, img {
 
 /* mobile */
 
-@media (min-width: 780px) {
-	article section {}
+@media (max-width: 480px) {
+	body { background: gray;}
+}
+
+/*fonts*/
+body{
+	font-family:'Marvel', sans-serif;
+	line-height: 1em;
+	font-size: 1.25em;
+}
+
+/*Nav*/
+
+nav a:link,
+nav a:visited {
+	color: #476081;
+	text-decoration: none;
+}
+
+nav a:hover {
+	-webkit-animation: bounce .5s;
+	-webkit-transform: translateY(-2px);
 
 }
 
+@webkit-keyframes bounce{
+	0% {-webkit-transform: translateY(0);}
+	50% {-webkit-transform: translateY(-2px);}
+	100% {-webkit-transform: translateY(0);}
+
+}
